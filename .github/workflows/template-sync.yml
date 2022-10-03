@@ -19,4 +19,5 @@ jobs:
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           source_repo_path: adobe/helix-project-boilerplate
-          upstream_branch: updates
+          upstream_branch: main
+          pr_branch_name_prefix: updates/from_boilerplate
