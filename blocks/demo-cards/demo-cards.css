@@ -1,0 +1,31 @@
+.demo-cards > ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-gap: 50px;
+}
+
+.demo-cards > ul > li {
+    border: 1px solid var(--highlight-background-color);
+    background-color: var(--background-color)
+}
+
+.demo-cards .demo-cards-card-body {
+    margin: 16px;
+}
+
+.demo-cards .demo-cards-card-image {
+    line-height: 0;
+}
+
+.demo-cards .demo-cards-card-body > *:first-child {
+    margin-top: 0;
+}
+
+.demo-cards > ul > li img {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+}
