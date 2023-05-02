@@ -63,7 +63,11 @@
 
   /* default width for content wrapper divs */
   --wrapper-width: 100%;
+  --section-heading-width: 100%;
 
+  /* RM Icons colors */
+  --icon-primary-color: #999;
+  --icon-secondary-color: #fff;
 }
 
 /* Desktop */
@@ -71,6 +75,7 @@
   :root {
     --heading-font-size-xxl: 100px; /* RM: h1 */
     --wrapper-width: 960px;
+    --section-heading-width: 40%;
   }
 
   h2 {
@@ -130,6 +135,8 @@ h2 {
   text-transform: uppercase;
   margin-bottom: 21px;
   padding-bottom: 5px;
+  width: var(--section-heading-width);
+  border-right: 4px solid transparent;
   border-bottom: 4px solid var(--heading-border-color);
 }
 
