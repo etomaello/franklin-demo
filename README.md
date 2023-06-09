@@ -2,8 +2,8 @@
 Your project's description...
 
 ## Environments
-- Preview: https://main--realmadrid--hlxsites.hlx.page/
-- Live: https://main--realmadrid--hlxsites.hlx.live/
+- Preview: https://feat-rm-smandrup--franklin-demo--etomaello.hlx.page/
+- Live: https://feat-rm-smandrup--franklin-demo--etomaello.hlx.live/
 
 ## Installation
 
