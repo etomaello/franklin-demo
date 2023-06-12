@@ -254,8 +254,8 @@ async function loadLazy(doc) {
 
   /* Don't show header and footer in the authoring guide */
   if (toClassName(getMetadata('template')) !== 'documentation') {
-    loadHeader(doc.querySelector('header'));
-    loadFooter(doc.querySelector('footer'));
+    //loadHeader(doc.querySelector('header'));
+    //loadFooter(doc.querySelector('footer'));
   }
 
   loadCSS(`${window.hlx.codeBasePath}/styles/lazy-styles.css`);
