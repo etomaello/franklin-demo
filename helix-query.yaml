@@ -8,7 +8,7 @@ indices:
       lastModified:
         select: none
         value: |
-          parseTimestamp(headers['last-modified'], 'DD-MM-YYYY HH:mm:ss')
+          parseTimestamp(headers["last-modified"], "ddd, DD MMM YYYY hh:mm:ss GMT")
       title:
         select: head > meta[property="og:title"]
         value: |
