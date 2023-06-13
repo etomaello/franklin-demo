@@ -4,7 +4,7 @@ indices:
     include:
       - '/sites/en/tour-bernabeu'
       - '/sites/en/tour-bernabeu/**'
-    target: /sites/en/query-index.xlsx
+    target: /sites/en/query-index.json
     properties:
       lastModified:
         select: none
