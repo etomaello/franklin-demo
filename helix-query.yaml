@@ -2,8 +2,9 @@ version: 1
 indices:
   en_version:
     include:
-      - '/sites/en/tour-bernabeu'
-      - '/sites/en/tour-bernabeu/**'
+      - '/sites/en/**'
+    exclude:
+      - '/sites/en/tour-bernabeu/en/fragments/**'
     target: /sites/en/query-index.json
     properties:
       lastModified:
