@@ -5,7 +5,7 @@ indices:
       - '/sites/en/**'
     exclude:
       - '/sites/en/tour-bernabeu/en/fragments/**'
-    target: /sites/en/query-index.json
+    target: /sites/en/query-index.xlsx
     properties:
       lastModified:
         select: none
