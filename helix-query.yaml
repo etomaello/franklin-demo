@@ -1,5 +1,36 @@
 version: 1
 indices:
+  es_version:
+    include:
+      - '/sites/area-vip'
+      - '/sites/tour-bernabeu'
+      - '/sites/**'
+    exclude:
+      - '/sites/ar/**'
+      - '/sites/ja/**'
+      - '/sites/fr/**'
+      - '/sites/hi/**'
+      - '/sites/ja/**'
+      - '/sites/pt/**'
+      - '/sites/de/**'
+    target: /sites/tour-bernabeu/query-index.xlsx
+    properties:
+      lastModified:
+        select: none
+        value: parseTimestamp(headers["last-modified"], "ddd, DD MMM YYYY hh:mm:ss GMT")
+      title:
+        select: head > meta[property="og:title"]
+        value: |
+          attribute(el, 'content')
+      description:
+        select: head > meta[name="description"]
+        value: |
+          attribute(el, 'content')
+      endpoint:
+        select: head > meta[name="data-api-endpoint"]
+        value: |
+          attribute(el, 'content')
+
   en_version:
     include:
       - '/sites/en/**'
