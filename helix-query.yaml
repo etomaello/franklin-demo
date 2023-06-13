@@ -30,7 +30,6 @@ indices:
         select: head > meta[name="data-api-endpoint"]
         value: |
           attribute(el, 'content')
-
   en_version:
     include:
       - '/sites/en/**'
