@@ -3,6 +3,7 @@ indices:
   en_version:
     include:
       - '/sites/en/tour-bernabeu'
+      - '/sites/en/tour-bernabeu/**'
     target: /sites/en/query-index.xlsx
     properties:
       lastModified:
