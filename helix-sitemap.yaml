@@ -3,7 +3,7 @@ version: 1
 sitemaps:
   area-vip:
     origin: https://main--franklin-demo--etomaello.hlx.live
-    lastmod: MM-DD-YYYY
+    lastmod: YYYY-MM-DD
     languages:
       es:
         source: /sites/area-vip/query-index.json
@@ -15,7 +15,7 @@ sitemaps:
         hreflang: en
   tour-bernabeu:
     origin: https://main--franklin-demo--etomaello.hlx.live
-    lastmod: MM-DD-YYYY
+    lastmod: YYYY-MM-DD
     languages:
       es:
         source: /sites/tour-bernabeu/query-index.json
