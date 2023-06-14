@@ -102,6 +102,63 @@
   --icon-secondary-color: #fff;
   --icon-terciary-color: #777;
 
+   /* Typography */
+   --type-detail-all-weight: 700;
+   --type-detail-m-size: 12px;
+   --type-detail-m-lh: 15px;
+   --type-detail-m-transform: uppercase;
+   --type-heading-all-weight: 700;
+   --type-heading-xxl-size: 44px;
+   --type-heading-xxl-lh: 55px;
+   --type-heading-xl-size: 2.25em;
+   --type-heading-xl-lh: 45px;
+   --type-heading-l-size: 28px;
+   --type-heading-l-lh: 35px;
+   --type-heading-m-size: 24px;
+   --type-heading-m-lh: 30px;
+   --type-body-l-size: 24px;
+   --type-body-l-lh: 27px;
+   --type-body-m-size: 20px;
+   --type-body-m-lh: 1.6875;
+   --type-body-s-size: 14px;
+   --type-body-s-lh: 1.3875;
+
+   /* duplicates of the above ? */
+   --body-line-height: 1.6875;
+
+   /* Spacing */
+   --spacing-xs: 8px;
+   --spacing-s: 16px;
+   --spacing-m: 24px;
+   --spacing-l: 48px;
+   --spacing-xl: 56px;
+   --spacing-xxl: 80px;
+
+   /* Colors */
+   --spectrum-blue: rgb(20 115 230);
+   --highlight-gradient: linear-gradient(75deg, #DB3278, #EE732F);
+
+   /* those (background) colors were missing */
+   --color-black: #000;
+   --color-gray-100: rgb(10% 10% 10%);
+   --color-gray-200: rgb(20% 20% 20%);
+   --color-gray-500: rgb(50% 50% 50%);
+   --color-white: #fff;
+   --color-info-accent: inherit;
+   --color-info-accent-hover: inherit;
+   --color-info-accent-down:inherit;
+   --color-info-primary: inherit;
+   --color-info-primary-hover: inherit;
+   --color-info-primary-down: inherit;
+   --color-info-secondary: inherit;
+   --color-info-secondary-hover: inherit;
+   --color-info-secondary-down: inherit;
+   --color-info-accent-reverse: inherit;
+   --color-info-accent-reverse-down: inherit;
+
+   /* Grid */
+   --grid-mobile-container-width: 83.4%;
+   --grid-desktop-container-width: 1200px;
 }
 
 /* Desktop */
