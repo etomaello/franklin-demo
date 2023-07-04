@@ -94,20 +94,23 @@ function createTextArea(fd) {
 }
 
 function createPdfLightbox(label, fd) {
-  const pdfLightbox = document.createElement('div');
-  pdfLightbox.id = 'pdf-lightbox';
-  label.append(pdfLightbox);
+  const GDPR = document.createElement('span');
+  GDPR.classList.add('gdpr-link');
+  GDPR.innerText = 'Click here to review the terms';
   const previewConfig = {
-    enableSearchAPIs: false,
-    enableAnnotationAPIs: false,
+    enableSearchAPIs: true,
+    enableAnnotationAPIs: true,
     embedMode: 'LIGHT_BOX',
   };
   // eslint-disable-next-line no-undef
-  const adobeDCView = new AdobeDC.View({ divId: 'pdf-lightbox', clientId: 'c2afeaeebba5467db777653d0248d11f' });
-  adobeDCView.previewFile({
-    content: { location: { url: fd.Extra } },
-    metaData: { fileName: 'GDPR.pdf', id: 'GDPR' },
-  }, previewConfig);
+  const adobeDCView = new AdobeDC.View({ clientId: 'c2afeaeebba5467db777653d0248d11f' });
+  GDPR.addEventListener('click', () => {
+    adobeDCView.previewFile({
+      content: { location: { url: fd.Extra } },
+      metaData: { fileName: 'GDPR.pdf', id: 'GDPR' },
+    }, previewConfig);
+  });
+  label.appendChild(GDPR);
   return label;
 }
 

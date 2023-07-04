@@ -50,6 +50,11 @@ main .form label {
   font-weight: 800;
 }
 
+main .form label .gdpr-link {
+  text-decoration: underline;
+  font-weight: bold;
+}
+
 main .form label.required::after {
   content: "*";
   color: red;
