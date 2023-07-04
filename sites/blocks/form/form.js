@@ -101,6 +101,8 @@ function createPdfLightbox(label, fd) {
     enableSearchAPIs: true,
     enableAnnotationAPIs: true,
     embedMode: 'LIGHT_BOX',
+    exitPDFViewerType: 'CLOSE',
+    defaultViewMode: 'TWO_COLUMN_FIT_PAGE',
   };
   // eslint-disable-next-line no-undef
   const adobeDCView = new AdobeDC.View({ clientId: 'dbec14707e474788958f8d85fd4343c2' });
