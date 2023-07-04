@@ -93,12 +93,36 @@ function createTextArea(fd) {
   return input;
 }
 
+function createPdfLightbox(label, fd) {
+  const pdfLightbox = document.createElement('div');
+  pdfLightbox.id = 'pdf-lightbox';
+  const previewConfig = {
+    enableSearchAPIs: true,
+    enableAnnotationAPIs: true,
+    embedMode: 'LIGHT_BOX',
+    defaultViewMode: 'TWO_COLUMN_FIT_PAGE',
+  };
+  label.append(pdfLightbox);
+  document.addEventListener('adobe_dc_view_sdk.ready', () => {
+    // eslint-disable-next-line no-undef
+    const adobeDCView = new AdobeDC.View({ divId: 'pdf-lightbox', clientId: 'c2afeaeebba5467db777653d0248d11f' });
+    adobeDCView.previewFile({
+      content: { location: { url: fd.Extra } },
+      metaData: { fileName: 'GDPR.pdf' },
+    }, previewConfig);
+  });
+  return label;
+}
+
 function createLabel(fd) {
   const label = document.createElement('label');
   label.setAttribute('for', fd.Field);
   label.textContent = fd.Label;
   if (fd.Mandatory === 'x') {
     label.classList.add('required');
+  }
+  if (fd.Type === 'checkbox' && fd.Extra != null) {
+    createPdfLightbox(label, fd);
   }
   return label;
 }
