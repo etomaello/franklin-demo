@@ -103,7 +103,7 @@ function createPdfLightbox(label, fd) {
     embedMode: 'LIGHT_BOX',
   };
   // eslint-disable-next-line no-undef
-  const adobeDCView = new AdobeDC.View({ clientId: 'c2afeaeebba5467db777653d0248d11f' });
+  const adobeDCView = new AdobeDC.View({ clientId: 'dbec14707e474788958f8d85fd4343c2' });
   GDPR.addEventListener('click', () => {
     adobeDCView.previewFile({
       content: { location: { url: fd.Extra } },
