@@ -93,23 +93,20 @@ function createTextArea(fd) {
   return input;
 }
 
-async function createPdfLightbox(label, fd) {
-  // eslint-disable-next-line import/no-unresolved
-  await import('https://acrobatservices.adobe.com/view-sdk/viewer.js');
+function createPdfLightbox(label) {
   const pdfLightbox = document.createElement('div');
   pdfLightbox.id = 'pdf-lightbox';
-  const previewConfig = {
-    enableSearchAPIs: true,
-    enableAnnotationAPIs: true,
-    embedMode: 'LIGHT_BOX',
-    defaultViewMode: 'TWO_COLUMN_FIT_PAGE',
-  };
   label.append(pdfLightbox);
   document.addEventListener('adobe_dc_view_sdk.ready', () => {
+    const previewConfig = {
+      enableSearchAPIs: false,
+      enableAnnotationAPIs: false,
+      embedMode: 'LIGHT_BOX',
+    };
     // eslint-disable-next-line no-undef
     const adobeDCView = new AdobeDC.View({ divId: 'pdf-lightbox', clientId: 'c2afeaeebba5467db777653d0248d11f' });
     adobeDCView.previewFile({
-      content: { location: { url: fd.Extra } },
+      content: { location: { url: 'https://www.etomaello.com/sites/en/tour-bernabeu/gdpr/sample-gdpr-privacy-policy-template.pdf' } },
       metaData: { fileName: 'GDPR.pdf', id: 'GDPR' },
     }, previewConfig);
   });
