@@ -93,7 +93,9 @@ function createTextArea(fd) {
   return input;
 }
 
-function createPdfLightbox(label, fd) {
+async function createPdfLightbox(label, fd) {
+  // eslint-disable-next-line import/no-unresolved
+  await import('https://acrobatservices.adobe.com/view-sdk/viewer.js');
   const pdfLightbox = document.createElement('div');
   pdfLightbox.id = 'pdf-lightbox';
   const previewConfig = {
