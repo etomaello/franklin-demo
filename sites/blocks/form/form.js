@@ -110,7 +110,7 @@ async function createPdfLightbox(label, fd) {
     const adobeDCView = new AdobeDC.View({ divId: 'pdf-lightbox', clientId: 'c2afeaeebba5467db777653d0248d11f' });
     adobeDCView.previewFile({
       content: { location: { url: fd.Extra } },
-      metaData: { fileName: 'GDPR.pdf' },
+      metaData: { fileName: 'GDPR.pdf', id: 'GDPR' },
     }, previewConfig);
   });
   return label;
