@@ -2,8 +2,8 @@
 Your project's description...
 
 ## Environments
-- Preview: https://feat-rm-smandrup--franklin-demo--etomaello.hlx.page/
-- Live: https://feat-rm-smandrup--franklin-demo--etomaello.hlx.live/
+- Preview: https://main--{repo}--{owner}.hlx.page/
+- Live: https://main--{repo}--{owner}.hlx.live/
 
 ## Installation
 
@@ -11,10 +11,10 @@ Your project's description...
 npm i
 ```
 
-## Tests
+## Linting
 
 ```sh
-npm test
+npm run lint
 ```
 
 ## Local development
