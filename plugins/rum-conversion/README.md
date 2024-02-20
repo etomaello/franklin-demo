@@ -49,7 +49,7 @@ At the end of the method add the following code:
   const { initConversionTracking } = await import('../plugins/rum-conversion/src/index.js');
   await initConversionTracking.call(context, document);
 ```
-Please, note that `getMetadata` and `toClassName` methods should be imported from `lib-franklin.js` in your `script.js`
+Please, note that `getMetadata` and `toClassName` methods should be imported from `aem.js` in your `script.js`
 
 :information_source: There are some mechanisms commonly used in Franklin projects, that load dynamically in the page, content from a different document after the page has been fully loaded.
 e.g.: A contact us form that is displayed in a modal dialog when the user clicks a button.
@@ -136,7 +136,7 @@ This method has 2 modes:
 
 ### Integration with Analytics solutions
 
-:warning: If you want to make use of the hook described below, you must ensure your `lib-franklin.js` is up to date (not older than 23.08.2023) and contains the changes in these 2 commits:
+:warning: If you want to make use of the hook described below, you must ensure your `aem.js` is up to date (not older than 23.08.2023) and contains the changes in these 2 commits:
 * https://github.com/adobe/helix-project-boilerplate/commit/871ede401d2d57c8825f8970f3b28cd9de5f27f8
 * https://github.com/adobe/helix-project-boilerplate/commit/fcca39dd4f5fd2aef6852580873ab4b2cce1e2af
 

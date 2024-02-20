@@ -13,7 +13,7 @@ import {
   waitForLCP,
   loadBlocks,
   loadCSS,
-} from './lib-franklin.js';
+} from './aem.js';
 import {
   analyticsTrack404,
   analyticsTrackConversion,

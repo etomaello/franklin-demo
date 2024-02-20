@@ -3,7 +3,7 @@
  *
  * https://github.com/sandstreamdev/cookieconsent
  */
-import { getPlaceholderOrDefault } from '../lib-franklin.js';
+import { getPlaceholderOrDefault } from '../aem.js';
 import { analyticsSetConsent } from '../analytics/lib-analytics.js';
 
 const REVOKE_CONSENT_ELEMENT_ID = 'cc-revoke-choice';
