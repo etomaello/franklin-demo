@@ -1,15 +1,3 @@
-import {
-  createOptimizedPicture,
-} from '../../scripts/aem.js';
-
-const getMetadata = (name, doc) => {
-  const attr = name && name.includes(':') ? 'property' : 'name';
-  const meta = [...doc.head.querySelectorAll(`meta[${attr}="${name}"]`)]
-    .map((m) => m.content)
-    .join(', ');
-  return meta || '';
-};
-
 /**
  * Loads a fragment.
  * @param {string} path The path to the fragment
@@ -27,6 +15,18 @@ async function loadFragment(path) {
 }
 
 /**
+ * Retrieves the content of metadata tags.
+ * @param {string} name The metadata name (or property)
+ * @param doc Document object to query for the metadata. Defaults to the window's document
+ * @returns {string} The metadata value(s)
+ */
+function getMetadata(name, doc = document) {
+  const attr = name && name.includes(':') ? 'property' : 'name';
+  const meta = [...doc.head.querySelectorAll(`meta[${attr}="${name}"]`)].map((m) => m.content).join(', ');
+  return meta || '';
+}
+
+/**
  * @param {HTMLElement} $block The header block element
  */
 export default async function decorate($block) {
@@ -36,11 +36,9 @@ export default async function decorate($block) {
   if (!doc) {
     return;
   }
-
   // find metadata
   const title = getMetadata('og:title', doc);
   const desc = getMetadata('og:description', doc);
-  const picture = getMetadata('og:image', doc);
 
   const $pre = document.createElement('p');
   $pre.classList.add('pretitle');
@@ -55,6 +53,7 @@ export default async function decorate($block) {
   const $link = document.createElement('div');
   $link.append(link);
   link.textContent = 'Read More';
+  link.className = 'button primary';
 
   const $text = document.createElement('div');
   $text.classList.add('text');
@@ -63,7 +62,7 @@ export default async function decorate($block) {
   const $image = document.createElement('div');
   $image.classList.add('image');
   // find image
-  const $hero = createOptimizedPicture(picture, 'featured article', true);
+  const $hero = doc.querySelector('body > main picture');
   if ($hero) {
     $image.append($hero);
   }

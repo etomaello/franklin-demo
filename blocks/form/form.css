@@ -2,8 +2,8 @@
     --background-color-primary: #fff;
     --label-color: #666;
     --border-color: #818a91;
-    --button-primary-color: #5F8DDA;
-    --button-primary-hover-color: #035fe6;
+    --button-primary-color: var(--color-yellow);
+    --button-primary-hover-color: var(--color-yellow);
     --form-font-size-m: 22px;
     --form-font-size-s: 18px;
     --form-font-size-xs: 16px;
@@ -34,12 +34,12 @@
     --form-fieldset-legend-font-weight: var(--form-title-font-weight);
     --form-fieldset-legend-border: none;
     --form-fieldset-legend-padding: 0;
-    --form-button-color: var(--background-color-primary);
-    --form-button-font-size: var(--form-font-size-s);
+    --form-button-color: var(--text-color);
+    --form-button-font-size: var(--form-font-size-xs);
     --form-button-background-color: var(--button-primary-color);
     --form-button-background-hover-color: var(--button-primary-hover-color);
     --form-button-border: 2px solid transparent;
-    --form-button-padding:15px 50px;
+    --form-button-padding: var(--button-padding);
     --form-upload-color: var(--background-color-primary);
     --form-upload-font-size: var(--form-font-size-xs);
     --form-upload-background-color: var(--mt-global-color-base-primary);
@@ -58,28 +58,18 @@ form [data-hidden="true"] {
 }
 
 main .form-container {
-    /* background-color: var(--mt-background-color-primary);  eslint-disable-line comment-empty-line-before */
-    
-    background-color: var(--background-color-primary);
-
-    /* padding: var(--form-padding); eslint-disable-line comment-empty-line-before */
-    
-    /* width: var(--form-width); eslint-disable-line comment-empty-line-before */
-    
-    margin: auto;
-
-    /* margin: var(--nav-height) auto; eslint-disable-line comment-empty-line-before */
+    background-color: var(--mt-background-color-primary);
+    padding: var(--form-padding);
+    width: var(--form-width);
+    margin: var(--nav-height) auto;
 }
 
 main .form {
     background-color: var(--form-background-color);
-    visibility: hidden;
 }
 
-main .form > div {
-  display: flex;
-  flex-direction: row;
-  gap: var(--form-field-vert-gap);
+main .form > div:not(:first-child) {
+    display: none;
 }
 
 main .form form {
@@ -243,10 +233,15 @@ main .form-file-wrapper .field-dropregion {
 main .form-file-wrapper .file-description button {
     --form-button-padding: 15px;
 
-    background: url('/icons/delete.svg') no-repeat;
+    background: url('../../icons/delete.svg') no-repeat;
     width: unset;
     border: unset;
     text-align: center;
+}
+
+.section.wknd-registration {
+    padding: 0 32px;
+    margin: 0 auto;
 }
 
 @media (min-width: 576px) {
@@ -267,7 +262,7 @@ main .form-file-wrapper .file-description button {
 
 @media (min-width: 1200px) {
     :root {
-        --form-width: 990px;
+        --form-width: 1200px;
     }
 }
 
