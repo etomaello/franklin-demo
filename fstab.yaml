@@ -1,2 +1,3 @@
 mountpoints:
-  /: https://adobe.sharepoint.com/sites/franklin-demo-tomaello/Shared%20Documents/website/WKND
+  /: https://content.da.live/etomaello/franklin-demo/
+  type: markup
