@@ -1,3 +1,4 @@
 mountpoints:
-  /: https://content.da.live/etomaello/franklin-demo/
-  type: markup
+  /:
+    url: https://content.da.live/etomaello/franklin-demo/
+    type: markup
